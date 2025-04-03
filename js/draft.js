@@ -1,13 +1,3 @@
-const age = 10;
-let totalPrice = 100.5;
-const userName = "Alice";
-const message = "hello";
-const isOpen = false;
-let user = null;
-let product;
-
-console.log(typeof product);
-
 // Арифметичні операції
 
 const x = 10;
@@ -144,3 +134,91 @@ console.log(salary - delta);
 console.log(salary * delta);
 console.log(salary / delta);
 console.log(salary % delta);
+
+let price = 0;
+const subscription = "free";
+
+if (subscription === "pro") {
+  price = 100;
+}
+
+console.log(price); // 0
+
+function getPrice(subscription) {
+  let price = 0;
+
+  if (subscription === "pro") {
+    price = 100;
+  }
+
+  return price;
+}
+
+console.log(getPrice("free")); // 0
+console.log(getPrice("pro")); // 100
+
+function checkAge(age) {
+  if (age >= 18) {
+    return "You are an adult";
+  }
+}
+
+console.log(checkAge(17));
+
+const grade = 40;
+
+if (grade >= 70) {
+  console.log("Satisfactory");
+} else {
+  console.log("Unsatisfactory");
+}
+
+function checkGrade(grade) {
+  if (grade >= 70) {
+    return "Satisfactory";
+  } else {
+    return "Unsatisfactory";
+  }
+}
+
+console.log(checkGrade(40)); // Unsatisfactory
+console.log(checkGrade(75)); // Satisfactory
+
+function checkGrade(grade) {
+  if (grade >= 70) {
+    return "Satisfactory";
+  } else {
+    return "Unsatisfactory";
+  }
+}
+
+console.log(checkGrade(40)); // Unsatisfactory
+console.log(checkGrade(75)); // Satisfactory
+
+function checkStorage(available, ordered) {
+  if (ordered == 0) {
+    return "There are no products in the order!";
+  } else if (ordered > available) {
+    return "Your order is too large, there are not enough items in stock!";
+  } else {
+    return "The order is accepted, our manager will contact you";
+  }
+}
+
+console.log(checkStorage(100, 0));
+
+const age = 20;
+const type = age >= 18 ? "adult" : "child";
+console.log(type); // 'adult'
+
+const a = 5;
+const b = 10;
+let biggerNumber;
+
+if (a > b) {
+  biggerNumber = a;
+} else {
+  biggerNumber = b;
+}
+
+console.log(biggerNumber); // 10
