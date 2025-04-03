@@ -195,3 +195,15 @@ console.log(findNumber(2, 6, 5));
 console.log(findNumber(8, 17, 3));
 console.log(findNumber(10, 50, 4));
 console.log(findNumber(43, 100, 7));
+
+function calcBmi(weight, height) {
+  let numWeight = weight.replace(",", ".");
+  numWeight = Number.parseFloat(numWeight);
+  const numHeight = Number.parseFloat(height);
+
+  const bmi = numWeight / numHeight ** 2;
+  return bmi.toFixed(1);
+}
+
+const bmi = calcBmi("82,3", "1.75");
+console.log(bmi);
